@@ -1,0 +1,12 @@
+.chat {
+  outline-width: 1px;
+  outline-style: dotted;
+}
+.name1 {
+  text-decoration-line: underline;
+  font-weight: bold;
+}
+.name2 {
+  text-decoration-line: underline;
+  color: rgb(94, 94, 235);
+}

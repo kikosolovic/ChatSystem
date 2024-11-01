@@ -1,0 +1,25 @@
+<div class="right-part-container" *ngIf="user">
+  <div class="username">
+    {{ user['firstName'] }}
+    {{ user['lastName'] }}
+  </div>
+  <div *ngIf="lastHistory && !clear">
+    <div *ngFor="let conv of lastHistory.conversation">
+      {{ conv.messageUser }}:
+      {{ conv.message }}
+    </div>
+  </div>
+
+  <form (ngSubmit)="formSubmit()" class="form-inline" autocomplete="off">
+    <input
+      autocomplete="false"
+      type="text"
+      name="text"
+      id="text"
+      class="form-control"
+      [(ngModel)]="text"
+    />
+
+    <button type="submit" class="button">Pošli</button>
+  </form>
+</div>

@@ -1,0 +1,18 @@
+<!-- <p>a</p>
+<p>{{selectedUser?.firstName}}</p>
+<div *ngIf="selectedUser">
+  <h2>User Details</h2>
+  <p>First Name: {{ selectedUser?.firstName }}</p>
+  <p>Last Name: {{ selectedUser?.lastName }}</p>
+  <p>Email: {{ selectedUser?.mail }}</p>
+</div> -->
+<div class="details-container">
+<img src="{{ user['image'] }}" alt="">
+<div *ngFor="let property of properties">
+  {{ user[property] }}
+</div>
+{{ gender }}<br>
+{{ country }}<br>
+<button class="btn-default" (click)="close()">Zavriet</button>
+</div>
+

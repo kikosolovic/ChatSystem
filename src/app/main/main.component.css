@@ -1,0 +1,30 @@
+.container {
+  display:grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  text-align: center;
+  flex:content;
+
+}
+
+.contacts,
+.details,
+.messages {
+  padding: 16px;
+  border: 1px;
+  outline-width: 1px;
+  outline-style: dotted;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  margin-right: 10px;
+}

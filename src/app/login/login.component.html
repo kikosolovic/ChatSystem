@@ -1,0 +1,34 @@
+<div class="wrapper">
+  <div class="logo">
+    <img
+      src="https://static.vecteezy.com/system/resources/previews/026/619/142/non_2x/default-avatar-profile-icon-of-social-media-user-photo-image-vector.jpg"
+      alt=""
+    />
+  </div>
+  <div class="text-center mt-4 name">Chat System</div>
+  <form class="p-3 mt-3">
+    <div class="form-field d-flex align-items-center">
+      <span class="far fa-user"></span>
+      <input
+        [formControl]="first"
+        type="text"
+        name="first"
+        id="userName"
+        placeholder="First Name"
+      />
+    </div>
+    <div class="form-field d-flex align-items-center">
+      <span class="fas fa-key"></span>
+      <input
+        [formControl]="last"
+        type="text"
+        name="last"
+        id="pwd"
+        placeholder="Last Name"
+      />
+    </div>
+    <button (click)="checkCredentials()" type="submit" class="btn mt-3">
+      Login
+    </button>
+  </form>
+</div>

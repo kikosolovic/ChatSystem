@@ -1,0 +1,11 @@
+<div *ngFor="let user of this.api.users; let i = index">
+  <button (click)="toggle[i] = !toggle[i]" class="button1">
+    <label>{{ user.firstName }} {{ user.lastName }}</label>
+    <br />
+    <label>{{ user.mail }}</label>
+  </button>
+  <div class="button-container" *ngIf="toggle[i]">
+    <button (click)="detail(user)">Zobraz detail</button>
+    <button (click)="chat(user)">Začni chat</button>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<!-- <div *ngFor="let user of this.api.users">{{ user.firstName }}</div>
+<button (click)="show()">dfsd</button> -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <p class="navbar-brand">
+    {{ currentUser.firstName }} {{ currentUser.lastName }}
+  </p>
+  <p class="navbar-brand">Pocet klikov {{ currentUser.clicks }}</p>
+  <p class="navbar-brand">Prihlaseny: {{ currentUser.loginTime | date: 'medium' }}</p>
+  <p class="navbar-brand">Pocet znakov: {{ charCount }}</p>
+  <p class="navbar-brand">Pocet konverzacii: {{ chatCount }}</p>
+  <button class="button" (click)="logout()">Log out</button>
+</nav>
+
+<div class="container">
+  <div class="contacts">
+    <app-contacts></app-contacts>
+  </div>
+
+  <div class="v">
+  <app-details *ngIf="detail; else elseBlock"></app-details>
+  <ng-template #elseBlock>
+    <app-history></app-history>
+  </ng-template>
+</div>
+
+
+  <div class="messages">
+    <app-messages></app-messages>
+  </div>
+</div>
+<!-- <router-outlet name="left"></router-outlet>
+<router-outlet name="center"></router-outlet>
+<router-outlet name="right"></router-outlet> -->
